@@ -17,10 +17,10 @@ deploy:
     local_dir: build
     skip_cleanup: true
     on:
-      repo: antonym/netboot.xyz
+      repo: Lezuziusz/netboot.xyz
 after_deploy:
-  - aws configure set preview.cloudfront true
-  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID_BOOT --paths "/*"
+#  - aws configure set preview.cloudfront true
+#  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID_BOOT --paths "/*"
 notifications:
   email:
-    - antony@mes.ser.li
+    - botzheimi@t-online.hu
